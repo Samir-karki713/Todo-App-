@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Todo</title>
+</head>
+<body>
+    <h1>Create Todo</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Todo</button>
+    </form>
+    <a href="{% url 'todo_list' %}">Back to Todo List</a>
+</body>
+</html>
